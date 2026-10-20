@@ -1,15 +1,15 @@
-# Minería de Texto · Respuestas a dudas[cite: 3, 4]
+# Minería de Texto · Respuestas a dudas
 
-## 4. «Bayes ingenuo es un clasificador lineal» (R1-2, ejercicio 2)[cite: 3]
+## 4. «Bayes ingenuo es un clasificador lineal» (R1-2, ejercicio 2)
 
 > Si se toma el logaritmo del cociente $P(\text{spam} \mid m)/P(\text{ham} \mid m)$, la regla de Bayes ingenuo queda como $w \cdot x + b$: una suma ponderada de los conteos de palabras[cite: 3]. Es la misma forma que la regresión logística[cite: 3]. Lo único que cambia entre los dos modelos es cómo se obtienen los pesos[cite: 3].
 
-**Analogía.** Dos cocineros siguen el mismo formato de receta: «tantos gramos de cada ingrediente»[cite: 3]. Uno decide las cantidades leyendo las de cada ingrediente por separado (Bayes ingenuo cuenta palabras clase por clase); el otro las ajusta probando el platillo completo hasta que sabe bien (la regresión logística optimiza todos los pesos a la vez para predecir la clase)[cite: 3].
+**Analogía.** Dos cocineros siguen el mismo formato de receta: «tantos gramos de cada ingrediente»[cite: 3]. Uno decide las cantidades leyendo las de cada ingrediente por separado (Bayes ingenuo cuenta palabras clase por clase); el otro las ajusta probando el platillo completo hasta que sabe bien (la regresión logística optimiza todos los pesos a la vez para predecir la clase).
 
-### Procedimiento[cite: 3]
-Sea $x$ el vector de conteos del mensaje $m$ ($x_j$ = número de veces que aparece la palabra $j$) y $\theta_{j,c} = P(\text{palabra } j \mid \text{clase } c)$[cite: 3]. Por el teorema de Bayes y la hipótesis de independencia:[cite: 3]
+### Procedimiento
+Sea $x$ el vector de conteos del mensaje $m$ ($x_j$ = número de veces que aparece la palabra $j$) y $\theta_{j,c} = P(\text{palabra } j \mid \text{clase } c)$[cite: 3]. Por el teorema de Bayes y la hipótesis de independencia:
 
-$$P(c \mid m) \propto P(c) \cdot \prod_j \theta_{j,c}^{x_j}$$[cite: 3]
+$$P(c \mid m) \propto P(c) \cdot \prod_j \theta_{j,c}^{x_j}$$
 
 Al dividir la expresión de spam entre la de ham, el denominador $P(m)$ se cancela[cite: 3]. Tomando logaritmo natural:[cite: 3]
 
